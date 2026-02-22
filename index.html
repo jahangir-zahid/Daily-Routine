@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Routine Tracker Pro+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="header">
+    <h1>Daily Routine Tracker</h1>
+    <button onclick="toggleDarkMode()">🌙</button>
+</div>
+
+<div class="input-section">
+    <input type="text" id="taskInput" placeholder="Task name">
+    <input type="number" id="timeInput" placeholder="Minutes">
+    <button onclick="addTask()">Add</button>
+</div>
+
+<ul id="taskList"></ul>
+
+<div class="summary">
+    <div><p>Total</p><h2 id="totalTime">0</h2></div>
+    <div><p>Completed</p><h2 id="completedTime">0</h2></div>
+    <div><p>Productivity</p><h2 id="productivity">0%</h2></div>
+</div>
+
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<canvas id="weeklyChart"></canvas>
+
+<div class="extra-buttons">
+    <button onclick="downloadPDF()">📊 Download Report</button>
+    <button onclick="enableReminder()">🔔 Enable Reminder</button>
+</div>
+
+<div class="calendar-section">
+    <h3>📅 Productivity Log</h3>
+    <input type="date" id="calendarDate">
+    <p id="calendarData">Select a date to view productivity.</p>
+</div>
+<footer class="footer">
+    Developed by <strong>Jahangir Ali</strong>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
